@@ -287,6 +287,7 @@ MonoBehaviour:
     AttackSpeed: 0
     Damage: 0
     Shield: 0
+    Xp: 0
 --- !u!114 &181820924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,8 +715,10 @@ GameObject:
   - 64: {fileID: 1177366479}
   - 23: {fileID: 1177366478}
   - 114: {fileID: 1177366477}
+  - 114: {fileID: 1177366482}
+  - 114: {fileID: 1177366483}
   m_Layer: 0
-  m_Name: Player2
+  m_Name: Ranger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -793,6 +796,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1177366482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177366476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bf10210d2ecd754d90734440e0325a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1177366483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177366476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1952d984601d914fa6e1d14adbfa0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelUpPropertieses: []
 --- !u!1 &1545795466
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,19 +1,16 @@
-﻿using Assets.Scripts.Level_system;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets.Scripts
+
+public class Player : MonoBehaviour
 {
-    public class Player : MonoBehaviour
+    public PlayerProperites PlayerProperites;
+
+    void Start()
     {
-        public PlayerProperites PlayerProperites;
-
-        void Start()
-        {
              
-        }
-
-
-
-
     }
+
+
+
+
 }

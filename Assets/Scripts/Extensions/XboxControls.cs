@@ -67,6 +67,7 @@ public class XboxControls : MonoBehaviour {
         yield return new WaitForSeconds(VibrateTime);
         GamePad.SetVibration((PlayerIndex)pControllerNumber, 0, 0);
     }
+
     public static int MaxPlayers  = 4;
 
     private static GamePadState[] mCurrentGamePadState = new GamePadState[4];

@@ -1,9 +1,21 @@
-﻿namespace Assets.Scripts.Level_system
+﻿using System;
+
+
+public delegate void LevelUpEvent(PlayerProperites playerProperites);
+
+[System.Serializable]
+public class LevelUpProperties
 {
-    [System.Serializable]
-    public class LevelUpProperties
+    public int XpToLevel;
+    public float Damage;
+    public event LevelUpEvent LevelUpEvent;
+
+    public void LevelUp(PlayerProperites playerProperites)
     {
-        public int XpToLevel;
-        public float Damage;
+        playerProperites.Damage += Damage;
+        if (LevelUpEvent != null)
+        {
+            LevelUpEvent.Invoke(playerProperites);
+        }
     }
 }

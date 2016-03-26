@@ -1,29 +1,45 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Assets.Scripts;
-using Assets.Scripts.Level_system;
+using Assets.Scripts.Player;
 
-public class XboxMovement : MonoBehaviour
+public class XboxMovement : Movement
 {
-    public int ControllerNumber = 0;
-
     private XboxControls _xboxControls;
-    private PlayerProperites _playerProperites;
+    private PlayerProperties _playerProperties;
+    private PlayerFlip _playerFlip;
+    private Collision _collision;
+    private Life _life;
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
         _xboxControls = XboxControls.instance;
-	    _playerProperites = GetComponent<Player>().PlayerProperites;
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-	    Move();
+	    _playerProperties = GetComponent<Player>().PlayerProperties;
+        _playerFlip = GetComponent<PlayerFlip>();
+	    _collision = GetComponentInChildren<Collision>();
+	    _life = GetComponent<Life>();
+
 	}
 
-    void Move()
+    // Update is called once per frame
+    protected override void Update ()
+	{
+        base.Update();
+        SetFlipped();
+    }
+
+    void SetFlipped()
     {
-        transform.Translate(_xboxControls.ThumbStick(Controls.LeftStick, ControllerNumber) * _playerProperites.Speed * Time.deltaTime);
+        _playerFlip.ShouldFlip(transform, _xboxControls.ThumbStick(Controls.LeftStick, _playerProperties.ControllerNumber),
+            _playerProperties.FlippedStart);
+    }
+
+    protected override void Move()
+    {
+        Vector2 velocity = _xboxControls.ThumbStick(Controls.LeftStick, _playerProperties.ControllerNumber).normalized *
+            _playerProperties.Speed * Time.deltaTime;
+
+        Vector2 allowedPosition = _collision.GetAllowedPosition(transform.position,
+            (Vector2)transform.position + velocity, GetComponent<Collider2D>().bounds.extents, gameObject);
+        transform.Translate(allowedPosition - (Vector2)transform.position, Space.World);
     }
 }

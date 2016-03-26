@@ -3,7 +3,8 @@
 
 public class Player : MonoBehaviour
 {
-    public PlayerProperites PlayerProperites;
+    public PlayerProperties PlayerProperties;
+    public Room CurrentRoom;
 
     void Start()
     {

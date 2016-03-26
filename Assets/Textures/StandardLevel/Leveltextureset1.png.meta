@@ -1,0 +1,300 @@
+fileFormatVersion: 2
+guid: eb7a7a1fa5ca3b54f97a47e3e2e17607
+timeCreated: 1459029405
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Leveltextureset1_0
+    21300002: Leveltextureset1_1
+    21300004: Leveltextureset1_2
+    21300006: Leveltextureset1_3
+    21300008: Leveltextureset1_4
+    21300010: Leveltextureset1_5
+    21300012: Leveltextureset1_6
+    21300014: Leveltextureset1_7
+    21300016: Leveltextureset1_8
+    21300018: Leveltextureset1_9
+    21300020: Leveltextureset1_10
+    21300022: Leveltextureset1_11
+    21300024: Leveltextureset1_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Leveltextureset1_0
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1526
+        width: 502
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -171.32, y: 173.24927}
+        - {x: -171.32, y: -171.75073}
+        - {x: 172.68, y: -171.75073}
+        - {x: 172.68, y: 173.24927}
+      tessellationDetail: 0
+    - name: Leveltextureset1_1
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 1543
+        width: 285
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -97.30667, y: 161.35461}
+        - {x: -97.30667, y: -160.64539}
+        - {x: 98.69333, y: -160.64539}
+        - {x: 98.69333, y: 161.35461}
+      tessellationDetail: 0
+    - name: Leveltextureset1_2
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 1511
+        width: 504
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -172.29736, y: 172.50928}
+        - {x: -172.29736, y: -171.49072}
+        - {x: 172.70264, y: -171.49072}
+        - {x: 172.70264, y: 172.50928}
+      tessellationDetail: 0
+    - name: Leveltextureset1_3
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 1511
+        width: 504
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -172.28406, y: 172.50928}
+        - {x: -172.28406, y: -171.49072}
+        - {x: 172.71594, y: -171.49072}
+        - {x: 172.71594, y: 172.50928}
+      tessellationDetail: 0
+    - name: Leveltextureset1_4
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 1511
+        width: 504
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -172.27063, y: 172.50928}
+        - {x: -172.27063, y: -171.49072}
+        - {x: 172.72937, y: -171.49072}
+        - {x: 172.72937, y: 172.50928}
+      tessellationDetail: 0
+    - name: Leveltextureset1_5
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 894
+        width: 502
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -171.32, y: 172.80402}
+        - {x: -171.32, y: -172.19598}
+        - {x: 172.68, y: -172.19598}
+        - {x: 172.68, y: 172.80402}
+      tessellationDetail: 0
+    - name: Leveltextureset1_6
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 887
+        width: 123
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42.19336, y: 215.02533}
+        - {x: -42.19336, y: -213.97467}
+        - {x: 42.80664, y: -213.97467}
+        - {x: 42.80664, y: 215.02533}
+      tessellationDetail: 0
+    - name: Leveltextureset1_7
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 894
+        width: 504
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -172.29736, y: 172.80402}
+        - {x: -172.29736, y: -172.19598}
+        - {x: 172.70264, y: -172.19598}
+        - {x: 172.70264, y: 172.80402}
+      tessellationDetail: 0
+    - name: Leveltextureset1_8
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 894
+        width: 504
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -172.28406, y: 172.80402}
+        - {x: -172.28406, y: -172.19598}
+        - {x: 172.71594, y: -172.19598}
+        - {x: 172.71594, y: 172.80402}
+      tessellationDetail: 0
+    - name: Leveltextureset1_9
+      rect:
+        serializedVersion: 2
+        x: 2306
+        y: 894
+        width: 504
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -172.27063, y: 172.80402}
+        - {x: -172.27063, y: -172.19598}
+        - {x: 172.72937, y: -172.19598}
+        - {x: 172.72937, y: 172.80402}
+      tessellationDetail: 0
+    - name: Leveltextureset1_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 302
+        width: 502
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -171.32, y: 172.66533}
+        - {x: -171.32, y: -172.33467}
+        - {x: 172.68, y: -172.33467}
+        - {x: 172.68, y: 172.66533}
+      tessellationDetail: 0
+    - name: Leveltextureset1_11
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 302
+        width: 504
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -172.29736, y: 172.66533}
+        - {x: -172.29736, y: -172.33467}
+        - {x: 172.70264, y: -172.33467}
+        - {x: 172.70264, y: 172.66533}
+      tessellationDetail: 0
+    - name: Leveltextureset1_12
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 160
+        width: 504
+        height: 646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -72.28406, y: 221.22667}
+        - {x: -172.28406, y: 185.22667}
+        - {x: -172.28406, y: -220.77333}
+        - {x: 172.71594, y: -220.77333}
+        - {x: 172.71594, y: 114.22667}
+        - {x: 77.71594, y: 221.22667}
+      - - {x: -43.284058, y: 136.22667}
+        - {x: 117.71594, y: 63.22667}
+        - {x: 118.71594, y: -152.77333}
+        - {x: -120.28406, y: -152.77333}
+      - - {x: -5.2840576, y: 132.22667}
+        - {x: -6.2840576, y: 130.22667}
+        - {x: -6.2840576, y: 126.22667}
+        - {x: -1.2840576, y: 123.22667}
+        - {x: 1.7159424, y: 123.22667}
+        - {x: 6.7159424, y: 126.22667}
+        - {x: 6.7159424, y: 130.22667}
+        - {x: 5.7159424, y: 132.22667}
+      - - {x: -73.28406, y: 196.22667}
+        - {x: -73.28406, y: 195.22667}
+        - {x: -69.28406, y: 191.22667}
+        - {x: -66.28406, y: 192.22667}
+        - {x: -66.28406, y: 195.22667}
+        - {x: -69.28406, y: 198.22667}
+        - {x: -71.28406, y: 198.22667}
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

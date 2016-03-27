@@ -4,13 +4,8 @@ using UnityEngine.UI;
 
 public class HealthNShield : MonoBehaviour
 {
-
     public Image HPBar;
     public Image ShieldBar;
-    public float MaxHealth = 100f;
-    public float CurrentHealth;
-    public float MaxShield = 200f;
-    public float CurrentShield;
 
     GameObject TextHp;
     Text ourHealthComponent;
@@ -18,11 +13,11 @@ public class HealthNShield : MonoBehaviour
     GameObject TextShield;
     Text ourShieldComponent;
 
+    private PlayerProperties _playerProperties;
+
     void Start()
     {
-        CurrentHealth = MaxHealth;
-        CurrentShield = MaxShield;
-
+        _playerProperties = GetComponent<PlayerProperties>();
         TextHp = GameObject.Find("hpText");
         ourHealthComponent = TextHp.GetComponent<Text>();
 
@@ -33,24 +28,23 @@ public class HealthNShield : MonoBehaviour
     void Update()
     {
         DecreaseShield();
-
-        if(CurrentShield <= 0)
+        
+        if (_playerProperties.Shield <= 0)
         {
-            CurrentShield = 0;
+            _playerProperties.Shield = 0;
             DecreaseHealth();
         }
+        if (_playerProperties.Health <= 0) { _playerProperties.Health = 0; }
+        if (_playerProperties.Shield <= 0) { _playerProperties.Shield = 0; }
 
-        if(CurrentHealth <= 0) { CurrentHealth = 0; }
-        if (CurrentShield <= 0) { CurrentShield = 0; }
-
-        ourHealthComponent.text = CurrentHealth.ToString("F0") + " / " + MaxHealth;
-        ourShieldComponent.text = CurrentShield.ToString("F0") + " / " + MaxShield;
+        ourHealthComponent.text = _playerProperties.Health.ToString("F0") + " / " + _playerProperties.MaxHealth;
+        ourShieldComponent.text = _playerProperties.Shield.ToString("F0") + " / " + _playerProperties.MaxShield;
     }
 
     void DecreaseHealth()
     {
-        CurrentHealth -= 0.5f;
-        float calcHealth = CurrentHealth / MaxHealth;
+        _playerProperties.Health -= (int)0.5f;
+        float calcHealth = _playerProperties.Health / (float)_playerProperties.MaxHealth;
         SetHealth(calcHealth);
     }
 
@@ -61,8 +55,8 @@ public class HealthNShield : MonoBehaviour
 
     void DecreaseShield()
     {
-        CurrentShield -= 0.5f;
-        float calcShield = CurrentShield / MaxShield;
+        _playerProperties.Shield -= (int)0.5f;
+        float calcShield = _playerProperties.Shield / (float)_playerProperties.MaxShield;
         SetShield(calcShield);
     }
 

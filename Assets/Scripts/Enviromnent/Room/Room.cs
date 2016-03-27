@@ -71,7 +71,17 @@ public class Room : ActivateObject
         {
             foreach (var directionSet in DirectionsSet)
             {
-                Ray ray = new Ray(child.Center, directionSet.Value * (MaxDistanceToOtherRoom + _collider2D.bounds.extents.x));
+                Ray ray = new Ray();
+
+                if (directionSet.Value.y > 0)
+                {
+                    ray = new Ray(child.Center, directionSet.Value * (MaxDistanceToOtherRoom + _collider2D.bounds.extents.y));
+                }
+                else if(directionSet.Value.x > 0)
+                {
+                    ray = new Ray(child.Center, directionSet.Value * (MaxDistanceToOtherRoom + _collider2D.bounds.extents.x));
+                }
+                
                 Collider2D collider2D = child.GetComponent<Collider2D>();
                 if (collider2D.bounds.IntersectRay(ray) && child != this)
                 {
@@ -109,6 +119,7 @@ public class Room : ActivateObject
         {
             return Direction.Up;
         }
+
 
         return Direction.None;
     }

@@ -8,6 +8,7 @@ public class PlayerProperties
     public float AttackSpeed;
     public int Damage;
     public int Shield;
+    public int MaxShield;
     public int ControllerNumber;
     public FlippedStart FlippedStart;
 

@@ -36,6 +36,7 @@ public class Life : MonoBehaviour
     void Die()
     {
         Instantiate(DeadObject, transform.position, Quaternion.identity);
+        GetComponentInParent<RespawnPlayer>().SpawnAfterTime(transform.position);
         Destroy(gameObject);
     }
     

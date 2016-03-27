@@ -8,6 +8,8 @@ public class Collision : MonoBehaviour
 
     private List<Collider2D> ColliderObjects = new List<Collider2D>();
 
+
+
     void OnTriggerStay2D(Collider2D otherCollider)
     {
         CollisionProperties collisionProperties = otherCollider.GetComponent<CollisionProperties>();

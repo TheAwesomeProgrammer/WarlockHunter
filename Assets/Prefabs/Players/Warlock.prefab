@@ -127,7 +127,6 @@ GameObject:
   - 114: {fileID: 114000011197735862}
   - 114: {fileID: 114000010755740106}
   - 114: {fileID: 114000011843853320}
-  - 114: {fileID: 114000010017288408}
   m_Layer: 11
   m_Name: Charactor
   m_TagString: Warlock
@@ -147,6 +146,24 @@ GameObject:
   m_Name: SpawnPosition
   m_TagString: Untagged
   m_Icon: {fileID: 2916078567066694178, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000012800134104
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013525959076}
+  - 61: {fileID: 61000013982622756}
+  - 114: {fileID: 114000013822261442}
+  - 50: {fileID: 50000011886442660}
+  m_Layer: 0
+  m_Name: PlayerEnterDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -227,6 +244,7 @@ Transform:
   m_LocalPosition: {x: -0.5302305, y: 0.1200003, z: 2.4961581}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4000013525959076}
   - {fileID: 4000011369836514}
   - {fileID: 4000013735874082}
   - {fileID: 4000011782994478}
@@ -284,7 +302,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000010143349482}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000011782994478
 Transform:
@@ -301,7 +319,7 @@ Transform:
   - {fileID: 4000013977629298}
   - {fileID: 4000010148841664}
   m_Father: {fileID: 4000010143349482}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000013136005180
 Transform:
@@ -345,6 +363,19 @@ Transform:
   m_Father: {fileID: 4000011782994478}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4000013525959076
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012800134104}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.4900002, y: 2.3799999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4000010143349482}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000013735874082
 Transform:
   m_ObjectHideFlags: 1
@@ -356,7 +387,7 @@ Transform:
   m_LocalScale: {x: 7.5, y: 7.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4000010143349482}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000013977629298
 Transform:
@@ -418,6 +449,23 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
+--- !u!50 &50000011886442660
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012800134104}
+  m_UseAutoMass: 1
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &50000013602408098
 Rigidbody2D:
   serializedVersion: 2
@@ -463,6 +511,20 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.03}
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.7}
+--- !u!61 &61000013982622756
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012800134104}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.03}
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.7}
 --- !u!81 &81000011534029502
 AudioListener:
   m_ObjectHideFlags: 1
@@ -470,17 +532,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012815979598}
   m_Enabled: 1
---- !u!114 &114000010017288408
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012444874382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10209ed47433795498359dab09c5e0b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000010420671210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -716,6 +767,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelUpPropertieses:
   - Damage: 0
+--- !u!114 &114000013822261442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012800134104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10209ed47433795498359dab09c5e0b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000013831068552
 MonoBehaviour:
   m_ObjectHideFlags: 1

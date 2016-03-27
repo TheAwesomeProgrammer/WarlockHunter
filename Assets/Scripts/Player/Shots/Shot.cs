@@ -9,11 +9,11 @@ public class Shot : MonoBehaviour
     public List<string> DamagingTags { get; set; }
     public List<string> KillingTags { get; set; }
 
-    void Start()
+    protected  virtual void Start()
     {
         DamagingTags = new List<string>();
         KillingTags = new List<string>();
-        DamagingTags.Add("Player");       
+        DamagingTags.Add("Warlock");       
     }
 
     void Update()

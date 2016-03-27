@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Assets.Scripts.Player;
 
 public class XboxMovement : Movement
 {
@@ -8,7 +7,6 @@ public class XboxMovement : Movement
     private PlayerProperties _playerProperties;
     private PlayerFlip _playerFlip;
     private Collision _collision;
-    private Life _life;
 
 	// Use this for initialization
 	protected override void Start () {
@@ -16,8 +14,6 @@ public class XboxMovement : Movement
 	    _playerProperties = GetComponent<Player>().PlayerProperties;
         _playerFlip = GetComponent<PlayerFlip>();
 	    _collision = GetComponentInChildren<Collision>();
-	    _life = GetComponent<Life>();
-
 	}
 
     // Update is called once per frame

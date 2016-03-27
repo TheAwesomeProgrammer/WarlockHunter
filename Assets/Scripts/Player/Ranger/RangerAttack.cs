@@ -4,6 +4,7 @@ public class RangerAttack : MonoBehaviour
 {
     public GameObject Arrow;
     public Transform ShootTransform;
+    public Controls Trigger = Controls.RT;
 
     private PlayerProperties _playerProperties;
     private XboxControls _xboxControls;
@@ -21,7 +22,7 @@ public class RangerAttack : MonoBehaviour
     void Update()
     {
         SetFlipping();
-        if (_canShoot && _xboxControls.UserPressedButton(Controls.RT, _playerProperties.ControllerNumber))
+        if (_canShoot && _xboxControls.UserPressedButton(Trigger, _playerProperties.ControllerNumber))
         {
             Shoot();
         }

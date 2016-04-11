@@ -3,21 +3,32 @@ using UnityEngine;
 
 public class Life : MonoBehaviour
 {
-    public GameObject DeadObject;
+    public event Action DeathEvent;
+    public int StartHealth = 3;
+    public int MaxHealth = 3;
+    public int Shield = 0;
+    public int MaxShield = 0;
 
-    private PlayerProperties _playerProperties;
+    private int _health;
 
     public int Health
     {
-        get{ return _playerProperties.Health; }
+        get{ return _health; }
 
-        set { _playerProperties.Health = (int)Mathf.Clamp(value, 0, _playerProperties.MaxHealth); }
+        set { _health = (int)Mathf.Clamp(value, 0, MaxHealth); }
     }
 
-    void Start()
+    void Awake()
     {
-        _playerProperties = GetComponent<Player>().PlayerProperties;
-        Health = _playerProperties.MaxHealth;
+        Health = StartHealth;
+    }
+
+    public void SetHealth(PlayerProperties playerProperties)
+    {
+        MaxHealth = playerProperties.MaxHealth;
+        Health = playerProperties.StartHealth;
+        Shield = playerProperties.Shield;
+        MaxShield = playerProperties.MaxShield;
     }
 
     void Update()
@@ -35,8 +46,10 @@ public class Life : MonoBehaviour
 
     void Die()
     {
-        Instantiate(DeadObject, transform.position, Quaternion.identity);
-        GetComponentInParent<RespawnPlayer>().SpawnAfterTime(transform.position);
+        if (DeathEvent != null)
+        {
+            DeathEvent();
+        }
         Destroy(gameObject);
     }
     

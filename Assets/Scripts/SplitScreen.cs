@@ -7,7 +7,7 @@ public class SplitScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start ()
-	{   
+	{
         // Display.displays[0] is the primary, default display and is always ON.
         // Check if additional displays are available and activate each.
         if (Display.displays.Length > 1)
@@ -18,11 +18,7 @@ public class SplitScreen : MonoBehaviour {
         {
             Display.displays[2].Activate();
         }
-
     }
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

@@ -9,6 +9,9 @@ TagManager:
   - Warlock
   - PlayerParent
   - Door
+  - Room
+  - PlayerCollision
+  - WarlockFog
   layers:
   - Default
   - TransparentFX
@@ -22,9 +25,9 @@ TagManager:
   - Room
   - HunterMinimap
   - Warlock
-  - 
-  - 
-  - 
+  - FogOfWar
+  - WarlockFog
+  - AlchemistUi
   - 
   - 
   - 
@@ -43,6 +46,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1474860665
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

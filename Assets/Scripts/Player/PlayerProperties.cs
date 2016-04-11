@@ -3,8 +3,8 @@
 public class PlayerProperties
 {
     public float Speed;
-    public int Health { get; set; }
     public int MaxHealth;
+    public int StartHealth = 3;
     public float AttackSpeed;
     public int Damage;
     public int Shield;
@@ -15,7 +15,7 @@ public class PlayerProperties
     public PlayerProperties(float speed, int health, float attackSpeed, int damage, int shield)
     {
         Speed = speed;
-        Health = health;
+        StartHealth = health;
         AttackSpeed = attackSpeed;
         Damage = damage;
         Shield = shield;

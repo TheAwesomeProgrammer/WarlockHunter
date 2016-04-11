@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: a6c0292cc682e7946ba6fb6c9b43ef80
+timeCreated: 1459057682
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MiniMapIcons_0
+    21300002: MiniMapIcons_1
+    21300004: MiniMapIcons_2
+    21300006: MiniMapIcons_3
+    21300008: MiniMapIcons_4
+    21300010: MiniMapIcons_5
+    21300012: MiniMapIcons_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MiniMapIcons_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 527
+        width: 444
+        height: 435
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -110, y: 217.5}
+        - {x: -222, y: 104.5}
+        - {x: -222, y: -121.5}
+        - {x: -183, y: -188.5}
+        - {x: -110, y: -217.5}
+        - {x: 117, y: -217.5}
+        - {x: 222, y: -127.5}
+        - {x: 222, y: 174.5}
+        - {x: 160, y: 217.5}
+      tessellationDetail: 0
+    - name: MiniMapIcons_1
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 546
+        width: 298
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -127, y: 150}
+        - {x: -149, y: 109}
+        - {x: -149, y: -87}
+        - {x: -141, y: -120}
+        - {x: -91, y: -150}
+        - {x: 88, y: -150}
+        - {x: 149, y: -95}
+        - {x: 149, y: 137}
+        - {x: 111, y: 150}
+      tessellationDetail: 0
+    - name: MiniMapIcons_2
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 527
+        width: 447
+        height: 448
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52.5, y: 224}
+        - {x: 4.5, y: 224}
+        - {x: -223.5, y: -153}
+        - {x: -223.5, y: -199}
+        - {x: -220.5, y: -210}
+        - {x: 13.5, y: -224}
+        - {x: 223.5, y: -224}
+        - {x: 223.5, y: -177}
+        - {x: 68.5, y: 218}
+      tessellationDetail: 0
+    - name: MiniMapIcons_3
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 119
+        width: 298
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 72, y: 158}
+        - {x: -52, y: 158}
+        - {x: -149, y: 92}
+        - {x: -149, y: -93}
+        - {x: -135, y: -124}
+        - {x: -69, y: -158}
+        - {x: 66, y: -158}
+        - {x: 149, y: -100}
+        - {x: 149, y: 73}
+        - {x: 143, y: 116}
+      - - {x: -7, y: 158}
+        - {x: -12, y: 151}
+        - {x: -12, y: 146}
+        - {x: -11, y: 145}
+        - {x: -7, y: 145}
+        - {x: 0, y: 154}
+        - {x: 0, y: 158}
+      tessellationDetail: 0
+    - name: MiniMapIcons_4
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 424
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - name: MiniMapIcons_5
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 101
+        width: 298
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -105, y: 149}
+        - {x: -149, y: 77}
+        - {x: -149, y: -61}
+        - {x: -138, y: -117}
+        - {x: -111, y: -149}
+        - {x: 89, y: -149}
+        - {x: 149, y: -107}
+        - {x: 149, y: 128}
+        - {x: 77, y: 149}
+      tessellationDetail: 0
+    - name: MiniMapIcons_6
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 101
+        width: 298
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -105, y: 149}
+        - {x: -149, y: 77}
+        - {x: -149, y: -61}
+        - {x: -138, y: -117}
+        - {x: -111, y: -149}
+        - {x: 89, y: -149}
+        - {x: 149, y: -107}
+        - {x: 149, y: 128}
+        - {x: 77, y: 149}
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

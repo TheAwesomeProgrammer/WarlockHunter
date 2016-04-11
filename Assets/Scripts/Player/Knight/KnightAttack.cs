@@ -13,11 +13,12 @@ public class KnightAttack : ActivateObject
         base.Start();
         _xboxInput = GetComponent<XboxInput>();
         ActivateTags.Add("Warlock");
+        _xboxInput.OnKeyDown += OnKeyDown;
     }
 
-    private void Update()
+    void OnKeyDown()
     {
-        if (_xboxInput.IsPressedDown() && !_attacking)
+        if (!_attacking)
         {
             PlayAnimation();
             Timer.Start(AnimationDuration, gameObject, "StartAttacking");

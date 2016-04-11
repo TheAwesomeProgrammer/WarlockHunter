@@ -21,7 +21,7 @@ public class WarlockMovement : Movement
         base.Start();
         _playerProperties = GetComponent<Player>().PlayerProperties;
         _collision = GetComponentInChildren<Collision>();
-        _collider2D = GetComponent<Collider2D>();
+        _collider2D = transform.FindChildByTag("PlayerCollision").GetComponent<Collider2D>();
     }
 
 

@@ -67,22 +67,20 @@ public class Collision : MonoBehaviour
                 continue;
             }
 
-            Ray horizontalRay = new Ray(currentPosition, new Vector2(wantedPosition.x - currentPosition.x, 0));
+            Vector2 movingDirection = (wantedPosition - currentPosition).normalized;
             float rayDistance = Mathf.Abs(wantedPosition.x - currentPosition.x) + extends.x;
-            float distance;
-            Bounds colliderBounds = colliderObject.bounds;
-            if (colliderBounds.IntersectRay(horizontalRay, out distance) && distance <= rayDistance)
+            
+            if (colliderObject.OverlapPoint(wantedPosition + movingDirection * rayDistance))
             {
-                allowedPosition.x = colliderBounds.center.x + (colliderBounds.extents.x * -horizontalRay.direction).x +
-                    (extends.x * -horizontalRay.direction).x;
+                allowedPosition.x = currentPosition.x;
             }
 
-            Ray verticalRay = new Ray(currentPosition, new Vector2(0, wantedPosition.y - currentPosition.y));
+            movingDirection = (wantedPosition - currentPosition).normalized;
             rayDistance = Mathf.Abs(wantedPosition.y - currentPosition.y) + extends.y;
-            if (colliderBounds.IntersectRay(verticalRay, out distance) && distance <= rayDistance)
+
+            if (colliderObject.OverlapPoint(wantedPosition + movingDirection * rayDistance))
             {
-                allowedPosition.y = colliderBounds.center.y + (colliderBounds.extents.y * -verticalRay.direction).y +
-                    (extends.x * -verticalRay.direction).y;
+                allowedPosition.y = currentPosition.y;
             }
         }
 

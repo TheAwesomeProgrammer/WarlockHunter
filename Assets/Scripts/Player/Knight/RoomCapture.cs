@@ -15,11 +15,12 @@ public class RoomCapture : MonoBehaviour
     {
         _xboxInput = GetComponent<XboxInput>();
         _player = GetComponentInParent<Player>();
+        _xboxInput.OnKeyDown += OnKeyDown;
     }
 
-    void Update()
+    void OnKeyDown()
     {
-        if (_xboxInput.IsPressedDown() && _canCapture)
+        if (_canCapture)
         {
             _canCapture = false;
             _player.CurrentRoom.Captured = true;

@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 
 
-public class WarlockAbillity : MonoBehaviour
+public class WarlockAbillity : CooldownObject
 {
     public string ButtonName;
     public float AnimationTime;
     public WarlockAbillityProperties WarlockAbillityProperties;
     public GameObject DamageObject;
-
-    protected float AbillityTimer;
 
     protected virtual void Update()
     {
@@ -17,7 +15,7 @@ public class WarlockAbillity : MonoBehaviour
 
     protected virtual void ShouldUseAbillity()
     {
-        if (Input.GetButtonDown(ButtonName) && AbillityTimer <= Time.time)
+        if (Input.GetButtonDown(ButtonName) && !_isOnCooldown)
         {
             PlayAnimation();
             Timer.Start(AnimationTime, gameObject, "UseAbillity");
@@ -31,13 +29,8 @@ public class WarlockAbillity : MonoBehaviour
 
     protected virtual void UseAbillity()
     {
-        SetCooldown();
+        SetOnCooldown();
         SetPropertiesOnObject(SpawnDamageObject());
-    }
-
-    protected virtual void SetCooldown()
-    {
-        AbillityTimer = Time.time + WarlockAbillityProperties.Cooldown;
     }
 
     protected virtual GameObject SpawnDamageObject()

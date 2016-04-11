@@ -13,7 +13,9 @@ public class Shot : MonoBehaviour
     {
         DamagingTags = new List<string>();
         KillingTags = new List<string>();
-        DamagingTags.Add("Warlock");       
+        DamagingTags.Add("PlayerCollision");    
+
+        
     }
 
     void Update()
@@ -30,7 +32,7 @@ public class Shot : MonoBehaviour
     {
         if (DamagingTags.Contains(otherCollider.tag))
         {
-            otherCollider.GetComponent<Life>().Health -= Damage;
+            otherCollider.GetComponentInParent<Life>().Health -= Damage;
             Destroy(gameObject);
         }
 

@@ -13,11 +13,11 @@ public class HealthNShield : MonoBehaviour
     GameObject TextShield;
     Text ourShieldComponent;
 
-    private PlayerProperties _playerProperties;
+    private Life _life;
 
     void Start()
     {
-        _playerProperties = GetComponent<PlayerProperties>();
+        _life = GetComponent<Life>();
         TextHp = GameObject.Find("hpText");
         ourHealthComponent = TextHp.GetComponent<Text>();
 
@@ -29,22 +29,22 @@ public class HealthNShield : MonoBehaviour
     {
         DecreaseShield();
         
-        if (_playerProperties.Shield <= 0)
+        if (_life.Shield <= 0)
         {
-            _playerProperties.Shield = 0;
+            _life.Shield = 0;
             DecreaseHealth();
         }
-        if (_playerProperties.Health <= 0) { _playerProperties.Health = 0; }
-        if (_playerProperties.Shield <= 0) { _playerProperties.Shield = 0; }
+        if (_life.Health <= 0) { _life.Health = 0; }
+        if (_life.Shield <= 0) { _life.Shield = 0; }
 
-        ourHealthComponent.text = _playerProperties.Health.ToString("F0") + " / " + _playerProperties.MaxHealth;
-        ourShieldComponent.text = _playerProperties.Shield.ToString("F0") + " / " + _playerProperties.MaxShield;
+        ourHealthComponent.text = _life.Health.ToString("F0") + " / " + _life.MaxHealth;
+        ourShieldComponent.text = _life.Shield.ToString("F0") + " / " + _life.MaxShield;
     }
 
     void DecreaseHealth()
     {
-        _playerProperties.Health -= (int)0.5f;
-        float calcHealth = _playerProperties.Health / (float)_playerProperties.MaxHealth;
+        _life.Health -= (int)0.5f;
+        float calcHealth = _life.Health / (float)_life.MaxHealth;
         SetHealth(calcHealth);
     }
 
@@ -55,8 +55,8 @@ public class HealthNShield : MonoBehaviour
 
     void DecreaseShield()
     {
-        _playerProperties.Shield -= (int)0.5f;
-        float calcShield = _playerProperties.Shield / (float)_playerProperties.MaxShield;
+        _life.Shield -= (int)0.5f;
+        float calcShield = _life.Shield / (float)_life.MaxShield;
         SetShield(calcShield);
     }
 
